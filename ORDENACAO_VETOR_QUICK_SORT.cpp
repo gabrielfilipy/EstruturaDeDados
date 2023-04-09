@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>//Biblioteca para gerar n˙meros aleatÛrios.
-#include <locale.h>//CORRIGIR ACENTUA«√O
+#include <time.h>//Biblioteca para gerar n√∫meros aleat√≥rios.
+#include <locale.h>//CORRIGIR ACENTUA√á√ÉO
 #include <bits/stdc++.h>//CALCULAR TEMPO
 
 using namespace std;
@@ -16,19 +16,19 @@ void calcularTempo(time_t start, time_t end);
 int main() {
 	time_t start, end;
 	
-	setlocale(LC_ALL, "");//CORRIGIR ACENTUA«√O
+	setlocale(LC_ALL, "");//CORRIGIR ACENTUA√á√ÉO
 	
-	int v[SIZEVECTOR] = { 0 }; //Inicializando todas as posiÁıes com o valor '0'.
+	int v[SIZEVECTOR] = { 0 }; //Inicializando todas as posi√ß√µes com o valor '0'.
 	
-	srand(time(NULL));//Gera uma semente aleatÛria baseada no hor·rio do computador.
+	srand(time(NULL));//Gera uma semente aleat√≥ria baseada no hor√°rio do computador.
 	
 	time(&start);
 	
-	//INSER«√O DE DADOS
+	//INSER√á√ÉO DE DADOS
 	for(int i = 0; i < SIZEVECTOR; i++)
-		v[i] = rand() % 10000; //Gerando valores aleatÛrios entre 0 e 99. Utilizando a semente.
+		v[i] = rand() % 10000; //Gerando valores aleat√≥rios entre 0 e 99. Utilizando a semente.
 		
-	printf("VETOR N√O ORDENADO: \n");  
+	printf("VETOR N√ÉO ORDENADO: \n");  
 	for(int i = 0; i < SIZEVECTOR; i++)
 		printf("%d \n", v[i]);
 		
@@ -47,12 +47,12 @@ int main() {
 	return 0;
 }
 
-//RECURSIVIDADE. OU SEJA, A PR”PRIA FUN«√O IR¡ CHAMAR ELA MESMA.
+//RECURSIVIDADE. OU SEJA, A PR√ìPRIA FUN√á√ÉO IR√Å CHAMAR ELA MESMA.
 void QuickSort (int v[], int p, int u) {
 		
 	int m;//PONTO CENTRAL
 	
-	if(p < u) {//CRIT…RIO DE PARADA
+	if(p < u) {//CRIT√âRIO DE PARADA
 		m = particao(v, p, u);//QUEBRAR O VETOR NO MEIO.
 		QuickSort(v, p, m);//ESQUERDO
 		QuickSort(v, m + 1, u);//DIREITO
@@ -60,7 +60,7 @@ void QuickSort (int v[], int p, int u) {
 	
 }
 
-//SER¡ CALCULADO O 'PONTO CENTRAL' E REALIZAR A ORDENA«√O 'ESQUERDA' E 'DIREITA'
+//SER√Å CALCULADO O 'PONTO CENTRAL' E REALIZAR A ORDENA√á√ÉO 'ESQUERDA' E 'DIREITA'
 int particao (int v[], int p, int u) {
 	//CALCULAR PONTO CENTRAL
 	int pc, pc_calc, i, j;
@@ -75,20 +75,20 @@ int particao (int v[], int p, int u) {
 	while(i < j) {
 		//CRESCENCTE
 		//do {//TESTA O LADO DIREITO
-		//	j--;//VINDO NA DIRE«√O AO MEIO.
+		//	j--;//VINDO NA DIRE√á√ÉO AO MEIO.
 		//} while(v[j] > pc);//PEGAR VALORES MAIORES
 		
 		//do {//TESTA O LADO ESQUERDO
-		//	i++;//INCIANDO DO '0' E INDO NA DIRE«√O AO MEIO.
+		//	i++;//INCIANDO DO '0' E INDO NA DIRE√á√ÉO AO MEIO.
 		//} while(v[i] < pc);//PEGAR VALORES MAIORES
 		
 		//DECRESCENCTE
 		do {//TESTA O LADO DIREITO
-			j--;//VINDO NA DIRE«√O AO MEIO.
+			j--;//VINDO NA DIRE√á√ÉO AO MEIO.
 		} while(v[j] < pc);//PEGAR VALORES MAIORES
 		
 		do {//TESTA O LADO ESQUERDO
-			i++;//INCIANDO DO '0' E INDO NA DIRE«√O AO MEIO.
+			i++;//INCIANDO DO '0' E INDO NA DIRE√á√ÉO AO MEIO.
 		} while(v[i] > pc);//PEGAR VALORES MAIORES
 		
 		if(i < j) {
@@ -109,7 +109,7 @@ void trocar(int v[], int i, int j) {
 
 void calcularTempo(time_t start, time_t end) {
     double time_taken = double(end - start);
-    cout << "Tempo de execuÁ„o : " << fixed
+    cout << "Tempo de execu√ß√£o : " << fixed
         << time_taken << setprecision(5);
     cout << " sec " << endl;
 }
